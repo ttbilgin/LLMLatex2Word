@@ -94,6 +94,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Uses the MML2OMML.XSL stylesheet for MathML to Office Math ML conversion
 - Built with Python and various open-source libraries
 
+## Credits
+
+https://github.com/python-openxml/python-docx/issues/320
+
 ## Contact
 
 T.T. Bilgin - [LinkedIn Profile](https://www.linkedin.com/in/ttbilgin/)
