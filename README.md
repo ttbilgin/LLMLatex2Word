@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Ask ChatGPT or Claude or any other LLM about a scientific topic. Then give "convert your answer into latex format" prompt. Then "copy" the latex code.
+1. Ask ChatGPT or Claude or any other LLM about a scientific topic. Input **"convert your answer into latex format"** prompt. Then **"copy"** the latex code.
 
 ![image](https://github.com/user-attachments/assets/1367f886-066c-42fe-a160-8203ad5f2bb4)
 
