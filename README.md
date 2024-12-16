@@ -33,11 +33,7 @@ pip install tkinter
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/latex-docx-converter.git
-cd latex-docx-converter
-```
+1. Download the repository:
 
 2. Install dependencies:
 ```bash
