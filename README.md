@@ -90,7 +90,7 @@ The model is trained by minimizing the \textbf{regularized objective function}:
 - Limited support for complex table structures
 - Does not support LaTeX figures and diagrams
 - Some complex mathematical structures might not convert perfectly
-- **This script is intended to work in Windows Platforms, Linux or Mac are not supported. LibreOffice or Openoffice are not supported.**
+- **This script is intended to work on Windows Platforms, Linux or Mac are not supported. LibreOffice or Openoffice are not supported.**
 
 ## Screenshot
 
