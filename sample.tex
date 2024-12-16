@@ -1,0 +1,48 @@
+In this study, $\mathbf{XGBoost-based\:imputation}$ was implemented through a systematic machine learning approach. The methodology employs a regression model tailored for handling missing values in the air quality dataset. The imputation process can be mathematically formulated as follows:
+
+Given a set of meteorological features
+\[
+\mathbf{X} = \{x_1, \dots, x_n\}, \quad \text{where} \, x_i \in \mathbb{R}^d
+\]
+Here, \( x_i \) represents the \( d \)-dimensional input features (e.g., blh, msl, TdegC, rh, w_s), and corresponding PM2.5 values
+\[
+\mathbf{Y} = \{y_1, \dots, y_n\}.
+\]
+
+The \textbf{XGBoost model} predicts missing values through an additive function:
+\[
+\hat{y}_i = \phi(\mathbf{x}_i) = \sum_{k=1}^K f_k(\mathbf{x}_i), \quad f_k \in \mathcal{F}
+\]
+where \( \mathcal{F} \) represents the space of regression trees, \( K = 100 \) is the number of trees, and \( f_k \) denotes the \( k \)-th tree in the ensemble.
+
+The model is trained by minimizing the \textbf{regularized objective function}:
+\[
+\mathcal{L} = \sum_{i=1}^n (\hat{y}_i - y_i)^2 + \sum_{k=1}^K \Omega(f_k),
+\]
+where the \textbf{regularization term} \( \Omega(f_k) \) is defined as:
+\[
+\Omega(f_k) = \gamma T + \frac{1}{2}\lambda \|\mathbf{w}\|^2.
+\]
+
+Here:
+- \( T \): Number of leaves in the tree,
+- \( \gamma \): Minimum loss reduction required to make a split (\( \gamma = 0 \) in this case),
+- \( \lambda \): L2 regularization term (\( \lambda = 1 \)),
+- \( \mathbf{w} \): Leaf weights, and \( \|\mathbf{w}\|^2 \) represents the L2 norm of the leaf weights.
+
+The model utilizes a \textbf{subsample ratio} of 0.8 for both instances and features to prevent overfitting:
+\[
+\mathbf{X}_{sub} = \text{sample}(\mathbf{X}, \eta=0.8),
+\]
+where \( \eta \) represents the sampling ratio.
+
+The \textbf{prediction error} is quantified using the \textbf{Root Mean Squared Error (RMSE)}:
+\[
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^n (\hat{y}_i - y_i)^2}.
+\]
+
+This mathematical framework enables the model to capture complex relationships between meteorological parameters and PM2.5 concentrations, facilitating \textbf{accurate imputation} of missing values in the air quality dataset.
+
+
+
+
