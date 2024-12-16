@@ -48,18 +48,22 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Run the application:
+1. Ask ChatGPT or Claude or any other LLM about a scientific topic. Then give "convert your answer into latex format" prompt. Then "copy" the latex code.
+
+![image](https://github.com/user-attachments/assets/1367f886-066c-42fe-a160-8203ad5f2bb4)
+
+2. Run the application:
 ```bash
 python latexdocx_gui.py
 ```
 
-2. The GUI window will appear with a text input area.
+3. The GUI window will appear with a text input area.
 
-3. Paste your LaTeX content into the text area.
+4. Paste your LaTeX content into the text area.
 
-4. Click the "CONVERT TO MSWORD" button.
+5. Click the "CONVERT TO MSWORD" button.
 
-5. The converted document will automatically open in Microsoft Word.
+6. The converted document will automatically open in Microsoft Word. (If it is installed!)
 
 ### Example Input
 
@@ -90,6 +94,7 @@ The model is trained by minimizing the \textbf{regularized objective function}:
 - Limited support for complex table structures
 - Does not support LaTeX figures and diagrams
 - Some complex mathematical structures might not convert perfectly
+- **This script is intended to work in Windows Platforms, Linux or Mac are not supported. LibreOffice or Openoffice are not supported.**
 
 ## Screenshot
 
