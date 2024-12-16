@@ -61,18 +61,6 @@ python latexdocx_gui.py
 
 6. The converted document will automatically open in Microsoft Word. (If it is installed!)
 
-### Example Input
-
-```latex
-In this study, $\mathbf{XGBoost-based\:imputation}$ was implemented through 
-a systematic machine learning approach.
-
-The model is trained by minimizing the \textbf{regularized objective function}:
-\[
-\mathcal{L} = \sum_{i=1}^n (\hat{y}_i - y_i)^2 + \sum_{k=1}^K \Omega(f_k)
-\]
-```
-
 ## Supported LaTeX Features
 
 - Mathematical equations (inline and display mode)
